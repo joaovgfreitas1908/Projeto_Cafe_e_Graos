@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro - Café & Grãos</title>
+
+    <link rel="shortcut icon"
+          href="imagens/logo cafe e grao sem fundo.png"
+          type="image/x-icon">
+
+    <link rel="stylesheet" href="cadastro.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Barra de acessibilidade -->
+    <div class="barra-acessibilidade"
+         role="group"
+         aria-label="Ferramentas de acessibilidade">
+
+        <button type="button"
+                id="diminuir-fonte"
+                aria-label="Diminuir fonte"
+                title="Diminuir fonte">A-</button>
+
+        <button type="button"
+                id="aumentar-fonte"
+                aria-label="Aumentar fonte"
+                title="Aumentar fonte">A+</button>
+
+        <button type="button"
+                id="alternar-tema"
+                aria-label="Ativar tema escuro"
+                title="Alternar tema">🌙</button>
+    </div>
+
+    <div class="pagina-container">
+
+        <main class="conteudo-principal">
+
+            <div class="card-container">
+
+                <header class="card-header">
+                    <h2>Criar Conta</h2>
+
+                    <p class="card-subtitle">
+                        Preencha os dados abaixo para se cadastrar
+                        no Café & Grão.
+                    </p>
+                </header>
+
+                <form id="form-cadastro"
+                      class="card-body"
+                      novalidate>
+
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+
+                        <input type="text"
+                               id="nome"
+                               name="nome"
+                               placeholder="Digite seu nome"
+                               autocomplete="name"
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="CPF">CPF</label>
+
+                        <input type="text"
+                               id="CPF"
+                               name="cpf"
+                               placeholder="XXX.XXX.XXX-XX"
+                               maxlength="14"
+                               inputmode="numeric"
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="CEP">CEP</label>
+
+                        <input type="text"
+                               id="CEP"
+                               name="cep"
+                               placeholder="00000-000"
+                               maxlength="9"
+                               inputmode="numeric"
+                               autocomplete="postal-code"
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="celular">Celular</label>
+
+                        <input type="tel"
+                               id="celular"
+                               name="celular"
+                               placeholder="(00) 00000-0000"
+                               maxlength="15"
+                               autocomplete="tel"
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone Fixo</label>
+
+                        <input type="tel"
+                               id="telefone"
+                               name="telefone"
+                               placeholder="(00) 0000-0000"
+                               maxlength="14">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+
+                        <input type="email"
+                               id="Email"
+                               name="email"
+                               placeholder="Seu e-mail"
+                               autocomplete="email"
+                               required>
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="senha">Senha</label>
+
+                        <div class="senha-container">
+
+                            <input type="password"
+                                   id="senha"
+                                   name="senha"
+                                   placeholder="Sua senha"
+                                   autocomplete="new-password"
+                                   required>
+
+                            <button type="button"
+                                    class="btn-toggle-senha"
+                                    id="toggle-senha"
+                                    aria-label="Mostrar senha"
+                                    title="Mostrar senha">
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="confirmacao">
+                            Confirme sua senha
+                        </label>
+
+                        <div class="senha-container">
+
+                            <input type="password"
+                                   id="confirmacao"
+                                   name="confirmacao"
+                                   placeholder="Confirme sua senha"
+                                   autocomplete="new-password"
+                                   required>
+
+                            <button type="button"
+                                    class="btn-toggle-senha"
+                                    id="toggle-confirmacao"
+                                    aria-label="Mostrar senha"
+                                    title="Mostrar senha">
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <div class="card-action">
+
+                        <button type="submit"
+                                class="btn-primary"
+                                id="btn-cadastrar">
+                            Cadastrar
+                        </button>
+
+                    </div>
+
+                    <p id="notificacao-cadastro"
+                       class="notificacao-cadastro"
+                       role="status"
+                       aria-live="polite"></p>
+
+                </form>
+
+            </div>
+
+        </main>
+
+        <footer class="footer">
+
+            <div class="footer-content">
+
+                <span>
+                    &copy; 2026 Café & Grão.
+                    Todos os direitos reservados.
+                </span>
+
+                <span class="wireframe-tag">
+                    Wireframe V1.0
+                </span>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+    <script src="cadastro.js"></script>
+
+</body>
+</html>

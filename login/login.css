@@ -48,7 +48,7 @@ p {
     border: 1px solid var(--cor-bege);
     box-shadow: 0 4px 12px rgba(61, 36, 23, 0.08);
     width: 100%;
-    max-width: 450px;
+    max-width: 540px;
 }
 
 /* Define o espaçamento entre os campos */

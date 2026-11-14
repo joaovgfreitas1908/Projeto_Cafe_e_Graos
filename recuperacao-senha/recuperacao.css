@@ -179,7 +179,7 @@ input:focus {
     text-decoration: underline;
 }
 
-/* Barra de acessibilidade */
+/* Barra de acessibilidade vertical */
 .barra-acessibilidade {
     position: fixed;
     top: 50%;
@@ -191,22 +191,29 @@ input:focus {
     z-index: 1000;
 }
 
+/* Botões marrons no padrão Café & Grãos */
 .barra-acessibilidade button {
     width: 42px;
     height: 42px;
-    border: 1px solid #D8C9BD;
-    border-radius: 10px;
-    background-color: #FFFFFF;
-    color: #3D2417;
+    border: none;
+    border-radius: 6px;
+    background-color: #3D2417;
+    color: #FFFFFF;
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.3s;
 }
 
+/* Efeito ao passar o mouse */
 .barra-acessibilidade button:hover {
-    background-color: #EBE2D7;
+    background-color: #674F41;
+    color: #FFFFFF;
 }
 
 /* Destaque para navegação pelo teclado */
@@ -307,7 +314,7 @@ body.modo-escuro .mostrar-senha {
     color: #F8EEDF;
 }
 
-/* Botão no tema escuro */
+/* Botão principal no tema escuro */
 body.modo-escuro .botao {
     background-color: #D4AD89;
     color: #211813;
@@ -334,13 +341,14 @@ body.modo-escuro .grupo-campo .mensagem-erro {
 
 /* Barra de acessibilidade no tema escuro */
 body.modo-escuro .barra-acessibilidade button {
-    background-color: #49372D;
+    background-color: #35271F;
     color: #F8EEDF;
-    border-color: #A88A73;
+    border: 1px solid #A88A73;
 }
 
 body.modo-escuro .barra-acessibilidade button:hover {
-    background-color: #674F41;
+    background-color: #49372D;
+    color: #D4AD89;
 }
 
 /* Responsividade para celulares */
